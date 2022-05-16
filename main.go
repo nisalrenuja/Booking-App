@@ -7,17 +7,28 @@ func main() {
 	const conferenceTickets int = 50
 	const remainingTickets int = 50
 
-	fmt.Printf("\nconferenceName is %T, conferenceTickets is %T and remainingTickets is %T\n", conferenceName, conferenceTickets, remainingTickets)
+	//fmt.Printf("\nconferenceName is %T, conferenceTickets is %T and remainingTickets is %T\n", conferenceName, conferenceTickets, remainingTickets)
 	fmt.Printf("\nWelcome to %v booking application\n", conferenceName)
 	fmt.Printf("We have %v conference tickets and remaining %v conference tickets\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets from here to attend")
 
-	var userName string
+	var firstName string
+	var lastName string
+	var email string
 	var userTickets int
 
-	userTickets = 2
-	userName = "Tom"
+	fmt.Println("\nEnter your first name:")
+	fmt.Scan(&firstName)
 
-	fmt.Printf("%v booked %v tikets\n", userName, userTickets)
+	fmt.Println("\nEnter your last name:")
+	fmt.Scan(&lastName)
+
+	fmt.Println("\nEnter your Email Address:")
+	fmt.Scan(&email)
+
+	fmt.Println("\nEnter number of tickets:")
+	fmt.Scan(&userTickets)
+
+	fmt.Printf("Thank you %v %v for booking %v tickets. You will recive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 
 }
